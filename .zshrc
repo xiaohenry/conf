@@ -1,14 +1,15 @@
 # If you come from bash you might have to change your $PATH.
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0_51)
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/apache-maven-3.5.4/bin:$PATH"
-export PATH="/usr/local/bin/idea:$PATH"
 export PATH="/usr/local/bin/dse-6.0.2/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/hxiao/.oh-my-zsh"
 export LESS=-iXFR
+export ARTIFACTORY_USER=hxiao
+export ARTIFACTORY_API_TOKEN=AKCp5bB3N4xg1ZYJmdcX2nxeR2sGd25SMBqNakKb4LvfrEh2LvSqSsTVdzhQZUGuppT21iyVf
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -100,18 +101,22 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vi ~/.zshrc"
+alias zshconf="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
 alias mci="mvn clean install"
 alias mci-st="mvn clean install -DskipITs -DskipTests"
 alias mci-si="mvn clean install -DskipITs"
-alias git-log="git log --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset' -10 --reverse"
+alias git-log="git log --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset' -20 --reverse"
 alias cd-repos="cd ~/dev/repos"
 alias cd-dev="cd ~/dev"
+alias cd-creds="cd ~/dev/creds"
 alias git-c="git commit -m "
 alias git-s="git status"
 alias git-a="git add ."
 alias git-f="git fetch"
+alias git-b="git branch"
+alias git-p="git push"
+alias git-r="git reset "
 alias git-pr="git pull --rebase " 
 alias git-ri="git rebase -i" 
 alias git-rc="git rebase --continue"
